@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 1rem;
+}
+
+header h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+header span {
+    margin-left: -1.5rem;
+    width: 30px;
+    line-height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(219, 85%, 26%);
+}
+
+header button {
+    margin-left: 4rem;
+    font-size: .8rem;
+    outline: none;
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 14%, 63%);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 1rem;
+}
+.cardUser {
+    width: 100%;
+    min-height: 80px;
+    padding: 1rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: hsl(211, 68%, 94%);
+}
+
+.cardUser img {
+    width: 40px;
+    height: 40px;
+}
+
+.cardUser .text h4, p {
+    display: inline;
+    font-size: .9rem;
+}
+
+.cardUser .text h4 {
+    margin-right: .2rem;
+}
+
+.cardUser .text p {
+    color: hsl(219, 12%, 42%);
+}
+
+.cardUser .text span {
+    margin-left: .2rem;
+    font-weight: 800;
+    color: hsl(224, 21%, 14%);
+}
+
+.cardUser .text .group {
+    font-weight: 800;
+    color: hsl(219, 85%, 26%);
+}
+
+.cardUser .text button {
+    width: 8px;
+    height: 8px;
+    margin-left: .3rem;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    background-color: hsl(1, 90%, 64%);
+}
+
+.cardUser .text small {
+    color: hsl(219, 12%, 42%);
+    display: block;
+    margin-top: .2rem;
+    margin-bottom: .8rem;
+}
+
+.cardUser .text div.privateMessage {
+    font-size: .8rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 0.5px solid  hsl(224, 21%, 14%);
+}
