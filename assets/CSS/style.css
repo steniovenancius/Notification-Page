@@ -4,107 +4,81 @@
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+#paginaNotificacao {
     margin: 1.5rem 1rem;
+    background-color: hsl(210, 60%, 98%);
 }
-
-header h4 {
-    font-size: 1.2rem;
-    font-weight: 800;
-}
-
-header span {
-    margin-left: -1.5rem;
-    width: 30px;
-    line-height: 25px;
-    border-radius: 5px;
-    text-align: center;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(219, 85%, 26%);
-}
-
-header button {
-    margin-left: 4rem;
-    font-size: .8rem;
-    outline: none;
-    border: none;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(219, 14%, 63%);
-}
-
-/* Main */
-main {
+header {
+    margin-bottom: 1.5rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 0 1rem;
+    align-items: baseline;
+    justify-content: space-between;
 }
-.cardUser {
-    width: 100%;
-    min-height: 80px;
-    padding: 1rem 1rem 0.5rem 1rem;
+header #titulo {
     display: flex;
+    align-items: flex-end;
+    justify-content: center;
     flex-direction: row;
-    gap: 10px;
-    border-radius: 10px;
-    background-color: hsl(211, 68%, 94%);
+    gap: .5rem;
 }
-
-.cardUser img {
-    width: 40px;
-    height: 40px;
-}
-
-.cardUser .text h4, p {
-    display: inline;
-    font-size: .9rem;
-}
-
-.cardUser .text h4 {
-    margin-right: .2rem;
-}
-
-.cardUser .text p {
-    color: hsl(219, 12%, 42%);
-}
-
-.cardUser .text span {
-    margin-left: .2rem;
-    font-weight: 800;
+header #titulo h2 {
+    font-size: 1.2rem;
     color: hsl(224, 21%, 14%);
 }
-
-.cardUser .text .group {
+header #titulo .caixaNotificacao {
+    text-align: center;
+    border-radius: 2px;
+    background-color: hsl(219, 85%, 26%);
+}
+header #titulo .caixaNotificacao p {
+    width: 35px;
+    line-height: 25px;
     font-weight: 800;
-    color: hsl(219, 85%, 26%);
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
 }
-
-.cardUser .text button {
-    width: 8px;
-    height: 8px;
-    margin-left: .3rem;
-    border-radius: 100%;
+header #marcarTodas {
     border: none;
-    outline: none;
-    background-color: hsl(1, 90%, 64%);
-}
-
-.cardUser .text small {
+    font-size: .9rem;
     color: hsl(219, 12%, 42%);
-    display: block;
-    margin-top: .2rem;
-    margin-bottom: .8rem;
+    background-color: hsl(210, 60%, 98%);
 }
-
-.cardUser .text div.privateMessage {
-    font-size: .8rem;
+/*Main*/
+/* Configuração do Padrão do Cartão de Notificação*/
+.cartaoNotificacao {
     padding: 1rem;
     border-radius: 8px;
-    border: 0.5px solid  hsl(224, 21%, 14%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+.cartaoNotificacao img {
+    width: 50px;
+    height: 50px;
+}
+.cartaoNotificacao .atividades {
+    color: hsl(219, 12%, 42%);
+}
+.cartaoNotificacao .atividades p {
+    font-size: .8rem;
+}
+.cartaoNotificacao .atividades .user {
+    color: hsl(224, 21%, 14%);
+}
+/* Configuração do Cartão quando Não Lido*/
+.naoLido {
+    box-shadow: 0px 5px 10px hsl(219, 85%, 26%);
+    background-color: hsl(211, 68%, 94%);
+}
+.naoLido .atividades .post::after, .naoLido .atividades .grupo::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative;
+    left: 5px;
+    display: inline-block;
+    background-color: hsl(1, 90%, 64%);
 }
